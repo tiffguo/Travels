@@ -63,6 +63,33 @@ a.active-page:not(.country_item){
   height: 650px;              
 }
 
+.foodpage {
+  background-image: url('../images/mykonosfood.JPG');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-position: center; 
+  background-size: cover;      
+  height: 650px; 
+}
+
+.countrypage {
+  background-image: url('../images/piccadillybetter.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-position: center; 
+  background-size: cover;      
+  height: 650px; 
+}
+
+.funpage {
+  background-image: url('../images/londonbridge.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-position: center; 
+  background-size: cover;      
+  height: 650px; 
+}
+
 header p{
   color: white;
   font-size: 24px;
@@ -117,73 +144,13 @@ p{
   padding: 10px;
   border-radius: 10px;
   margin: 5px;
+  width: 50%;
 }
 
 .countryimgs{
   width: 50%;
 }
 
-.gallery {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  grid-gap: 15px;
-  grid-template-areas: 
-  'pic1 pic2 pic3'
-  'pic4 pic5 pic6'
-  'pic7 pic8 pic9';
-
-}
-
-.gallery img {
-  width: 100%;
-  height: 25rem;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-}
-
-.pic1{
-  grid-area: pic1;
-  background-image: url("../images/mykonosfood.JPG");
-}
-.pic2{
-  grid-area: pic2;
-  background-image: url("../images/mykonosfood.JPG");
-}
-.pic3{
-  grid-area: pic3;
-  background-image: url("../images/mykonosfood.JPG");
-}
-.pic4{
-  grid-area: pic4;
-  background-image: url("../images/mykonosfood.JPG");
-}
-.pic5{
-  grid-area: pic5;
-  background-image: url("../images/mykonosfood.JPG");
-}
-.pic6{
-  grid-area: pic6;
-  background-image: url("../images/mykonosfood.JPG");
-}
-.pic7{
-  grid-area: pic7;
-  background-image: url("../images/mykonosfood.JPG");
-}
-.pic8{
-  grid-area: pic8;
-  background-image: url("../images/mykonosfood.JPG");
-}
-.pic9{
-  grid-area: pic9;
-  background-image: url("../images/mykonosfood.JPG");
-}
 
 
 
@@ -234,3 +201,37 @@ label {
   font-family: 'Josefin+Sans', sans-serif;
 }
 
+/* .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+  justify-items: center;
+  grid-gap: 15px;
+  grid-row-gap: 10px;
+  padding-bottom:10px;
+}
+
+.gallery img {
+  max-width: 200px;
+  max-height: 150px;
+  border: 5px solid #333;
+  border-radius: 20px;
+} */
+
+.gals img{
+  width: 200px;
+  height: auto;
+  border: 3px solid white;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.gals > .gal_list {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+
+  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(200px, 1fr)); */
+}
