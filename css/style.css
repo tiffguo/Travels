@@ -22,20 +22,31 @@ h1{
 h2{
   color: white;
   font-size: 30px;
-  padding: 20px;
+  padding-top: 30px;
+}
+
+header{
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  flex-direction:column;
+}
+
+.nav_links{
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
 }
 
 nav{
-  background-color: #333;
   text-align: center;
-  padding-bottom: 10px;
-  margin-bottom: 70px;
+  padding-bottom: 15px;
 }
 
 nav li{
   display:inline;
-  font-size: 20px;
-  margin: 15px;
+  font-size: 15px;
+  margin: 10px;
 }
 
 
@@ -50,93 +61,105 @@ li a:hover:not(.active) {
 }
 
 a.active-page:not(.country_item){
-  text-decoration: underline;
+    border-style:double;
+  border-width: 2px 0 2px 0;
+  color: white;
 }
 
 
-.homepage {
+.homescroll {
   background-image: url('../images/pexels-burst-374815.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed; 
   background-position: center; 
   background-size: cover;      
-  height: 650px;              
+  height: 400px;
+  padding-top: 70px;              
 }
 
-.foodpage {
-  background-image: url('../images/mykonosfood.JPG');
-  background-repeat: no-repeat;
-  background-attachment: fixed; 
-  background-position: center; 
-  background-size: cover;      
-  height: 650px; 
-}
-
-.countrypage {
+.countryscroll {
   background-image: url('../images/piccadillybetter.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed; 
   background-position: center; 
   background-size: cover;      
-  height: 650px; 
+  height: 400px; 
+  padding-top: 70px;  
 }
 
-.funpage {
+.foodscroll {
+  background-image: url('../images/mykonosfood.JPG');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-position: center; 
+  background-size: cover;      
+  height: 400px; 
+  padding-top: 70px;  
+}
+
+.funscroll {
   background-image: url('../images/londonbridge.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed; 
   background-position: center; 
   background-size: cover;      
-  height: 650px; 
+  height: 400px; 
+  padding-top: 70px;  
 }
 
-header p{
-  color: white;
-  font-size: 24px;
-  text-align: center;
-}
 
 header h2{
   color: white;
   font-size: 30px;
   padding-top: 20px;
-  background-color: #333;
+  /* font-family: 'Roboto', sans-serif; */
 }
 
-a.skip{
+
+.skip a{
   background: white;
-  position: absolute;
-  top: -100px;
-  left: 0;
-  padding: 7px;
-  -webkit-transition: top 1s ease-out;
-  transition: top 1s ease-out;
-  z-index: 1;
-}
-
+  text-decoration: none;
+  font-size: 20px;
+	left: 0;
+	padding: 15px;
+	-webkit-transition: top 0.8s ease-out;
+	transition: top 0.8s ease-out;
+	z-index: 1;
+	position: absolute;
+	top: -50px;
+  }
+  
 .skip a:focus{
-  top: 100px;
-}
+	position: absolute;
+  top: 110px;
+  color: rgb(58, 58, 58);
+  }
 
 *:focus{
-  border-style: dotted;
+  border-style: double;
+  border-color:black;
   border-width: 2px 0 2px 0;
+  /* text-decoration-color: black; */
 }
   
 p{
   color: rgb(255, 255, 255);
-  font-size: 25px;
+  font-size: 20px;
   line-height: 1.4;
   padding: 20px;
   text-align: center;
   font-family: 'Josefin+Sans', sans-serif;
 }
 
-.text{
-  background-color: rgba(85, 85, 85, 0.55);
+.bigtext{
+  background-color: rgba(85, 85, 85, 0.70);
   border: 5px solid black;
   padding: 20px;
   align-self: center;
+}
+
+.bigtext p{
+  font-size: 25px;
 }
 
 #profile{
@@ -144,15 +167,12 @@ p{
   padding: 10px;
   border-radius: 10px;
   margin: 5px;
-  width: 50%;
+  width: 90%;
 }
 
 .countryimgs{
   width: 50%;
 }
-
-
-
 
 input[type=text], textarea {
   width: 100%; /* Full width */
@@ -201,37 +221,144 @@ label {
   font-family: 'Josefin+Sans', sans-serif;
 }
 
-/* .gallery {
+
+.gals{
+  /* list-style-type: none; */
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
-  justify-items: center;
-  grid-gap: 15px;
-  grid-row-gap: 10px;
-  padding-bottom:10px;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  /* padding-left: 100px; */
+  grid-row-gap: 30px;
 }
 
-.gallery img {
-  max-width: 200px;
-  max-height: 150px;
-  border: 5px solid #333;
-  border-radius: 20px;
-} */
-
-.gals img{
-  width: 200px;
+.gals > img {
+  width: 75%;
   height: auto;
   border: 3px solid white;
-  padding: 5px;
+  /* padding: 5px; */
+  margin: 0 auto;
   border-radius: 10px;
 }
 
-.gals > .gal_list {
-  list-style-type: none;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 1rem;
+#landing {
+    animation-name: fadein;
+    animation-duration: 2.0s;
+     /*Your code here.*/
+  }
+  
+  @-webkit-keyframes fadein{
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 
-  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(200px, 1fr)); */
+#logo {
+  text-decoration:none;
+}
+
+
+@media screen and (min-width: 650px){
+  header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  header h2{
+    padding: 35px 25px;
+  }
+
+  .nav_links{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    margin-top: 70px;
+    margin-right: 30px;
+  }
+
+  nav li{
+    display:inline;
+    font-size: 20px;
+    margin: 0px 20px;
+  }
+
+  .homescroll{
+    height: 500px; 
+    padding-top: 200px;  
+  }
+
+  .foodscroll{
+    height: 500px; 
+    padding-top: 200px;  
+  }
+
+  .countryscroll{
+    height: 500px; 
+    padding-top: 200px;  
+  }
+
+  .funscroll{
+    height: 500px; 
+    padding-top: 200px;  
+  }
+
+  #profile{
+    width: 30%;
+    margin-right: 10%;
+  }
+
+  h2{
+    margin-bottom: 10px;
+  }
+
+  p{
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+
+  .abouttext{
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  
+  .about{
+    margin: 100px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+  }
+  
+  .gals{
+    margin: 50px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-row-gap: 30px;
+  }
+
+  .gals > img {
+    width: 75%;
+  }
+
+@media screen and (min-width: 1000px){
+  .gals{
+    margin: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-row-gap: 30px;
+  }
+  
+  #hamburger-button{
+    display: block;
+    margin-top: 0;
+    margin-left: auto;
+    font-size: 14px;
+    margin-right: 2%;
+    border: none;
+    background-color: #C2D7DA;
+  }
+}
+
 }

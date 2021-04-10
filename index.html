@@ -5,45 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Tiffany's Travels</title>
   </head>
   <body>
-    <a class = "skip" href="#about">More about me</a>
-
+    <div class = "skip"><a href="#aboutmesection">More About Me &#8595;</a></div>
 
     <header class="homepage">
-      <h2>Tiffany's Travels</h2>
+
+      <a id="logo" href="index.html"><h2>Tiffany's Travels</h2></a>
+
       <nav>
-        <ul>
+        <!-- <button onclick = "toggle()" id="hamburger-button" class="hamburger-button"><i class="fas fa-bars"></i> menu</button>
+		    <div class= "the-menu" id = "the-menu"> -->
+
+        <ul class="nav_links">
           <li><a href="index.html" class='active-page'>Home</a></li>
-          <li><a href ="countries.html">Countries</a></li>
+          <li><a href ="countries.html">Places</a></li>
           <li><a href ="food.html">Food</a></li>
           <li><a href ="fun.html">Fun</a></li>
           <li><a href ="contact.html">Contact</a></li>
         </ul>
+        </div>
       </nav>
-      <div class="landing text">
-      <a id="landing"></a>
-        <h1>Welcome to my travels.</h1>
-        <p>Join me as I share my adventures trekking across the globe!</p>
-      </div>
-
     </header>
 
       <main>
-        <div class="about text">
-          <a id="about"></a>
-          <h2>About</h2>
+        <div class="homescroll">
+          <div id="landing" class="bigtext">
+              <h1>Welcome to my travels.</h1>
+              <p>Join me as I share my adventures trekking across the globe!</p>
+            </div>
+        </div>
 
-          <p> Hey everyone! I'm Tiffany Guo and I'm a student at the University of Michigan. I'm also a paper crane origamist, carbohydrate enthusiast, and hobbyist Doordasher. </p>
-          <p> My varied interests and my thirst to explore have made me an avid adventurist. I take every chance I get to experience new sights, immerse myself in culture, and eat amazing food. Come learn more about my travels abroad, and stay in touch to see where I'm headed to next! </p>
+        <div class="about" id="aboutmesection">
+          <div>
+          <h2>Hey Everyone!</h2>
+          <p class="abouttext"> I'm Tiffany Guo and I'm a student at the University of Michigan. I'm also a paper crane origamist, carbohydrate enthusiast, and hobbyist Doordasher. </p>
+          <p class="abouttext"> My varied interests and my thirst to explore have made me an avid adventurist. I take every chance I get to experience new sights, immerse myself in culture, and eat amazing food. Come learn more about my travels abroad, and stay in touch to see where I'm headed to next! </p>
+          </div>
           <img src = "images/meinhat.JPG" id="profile" alt = "me in a hat" width="450"/>
         </div>
 
-
       </main>
+      <script src="main.js"></script>
+
       <footer>
         <p>Made with Love &hearts; by Tiffany</p>
       </footer>
