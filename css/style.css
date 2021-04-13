@@ -146,7 +146,8 @@ header h2{
 	transition: top 0.8s ease-out;
 	z-index: 1;
 	position: absolute;
-	top: -50px;
+  top: -50px;
+  font-family: 'Staatliches', 'sans-serif';
   }
   
 .skip a:focus{
@@ -242,11 +243,9 @@ label {
 
 
 .gals{
-  /* list-style-type: none; */
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  /* padding-left: 100px; */
   grid-row-gap: 30px;
 }
 
@@ -281,10 +280,17 @@ label {
   .wave {
     animation: none;
   }
+  .bounce{
+    animation: none;
+  }
 }
 
 #logo {
   text-decoration:none;
+}
+
+#arrow {
+  visibility: hidden;
 }
 
 
@@ -436,4 +442,125 @@ label {
     width: 30%;
     margin-right: 10%;
   }
+
+  .wrap {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    margin-top: 185px;
+  }
+  
+  #arrow {
+    visibility: visible;
+    height: 60px;
+    width: auto;
+  }
+  
+  .bounce {
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+    animation: bounce 3.6s ease infinite;
+    transform-origin: 50% 50%;
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    5.55556% {
+      transform: translateY(0);
+    }
+    11.11111% {
+      transform: translateY(0);
+    }
+    22.22222% {
+      transform: translateY(-15px);
+    }
+    27.77778% {
+      transform: translateY(0);
+    }
+    33.33333% {
+      transform: translateY(-15px);
+    }
+    44.44444% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  #londonpic{
+    width: 500px;
+    height: 500px;
+  }
+
+  .flip-card {
+    background-color: transparent;
+    width: 500px;
+    height: 500px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+  .cardwords{
+    overflow-wrap: normal;
+  }
+
+  .cardheader{
+    font-size: 50px;
+  }
+
+  .cardgrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-row-gap: 15px;
+  }
+
+  .cardgrid > img {
+    width: 75%;
+    height: auto;
+    border: 3px solid white;
+    /* padding: 5px; */
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+  
 }
