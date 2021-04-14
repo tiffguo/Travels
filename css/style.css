@@ -252,10 +252,7 @@ label {
 .gals > img {
   width: 75%;
   height: auto;
-  border: 3px solid white;
-  /* padding: 5px; */
   margin: 0 auto;
-  border-radius: 10px;
 }
 
 #landing {
@@ -274,14 +271,29 @@ label {
   }
 
 @media (prefers-reduced-motion: reduce) {
+  html{
+    scroll-behavior: auto; /* Removes scroll animation */
+  }
   #landing {
     animation: none;
   }
   .wave {
     animation: none;
   }
-  .bounce{
-    animation: none;
+
+  .skip a{
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .skip a:focus{
+    top:110px;
+  }
+
+  .flip-card-inner, .flip-card:focus, .flip-card:hover {
+    -webkit-transition: none;
+    transition: none !important;
+    transform: none !important;
   }
 }
 
@@ -317,6 +329,10 @@ label {
 /* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
+}
+
+.flip-card:focus .flip-card-inner {
+	transform: rotateY(180deg);
 }
 
 /* Position the front and back side */
@@ -410,6 +426,7 @@ label {
   border-radius: 10px;
 }
 
+
 /* TABLET VIEW */
 @media screen and (min-width: 663px){
   header{
@@ -485,10 +502,11 @@ label {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     grid-row-gap: 30px;
+    justify-items: center;
   }
 
   .gals > img {
-    width: 75%;
+    width: 100%;
   }
 
   .cardpic{
@@ -704,4 +722,9 @@ label {
     border-radius: 10px;
   }
   
+  @media (prefers-reduced-motion: reduce) {
+    .bounce{
+      animation: none;
+    }
+  }
 }
