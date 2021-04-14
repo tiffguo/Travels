@@ -367,6 +367,21 @@ label {
   box-shadow: 0 3000px rgba(29, 24, 24, 0.801) inset;
 }
 
+#canadaflag{
+  background-image: url('../images/canadianflag1.png');
+  box-shadow: 0 3000px rgba(29, 24, 24, 0.801) inset;
+}
+
+#mexicanflag{
+  background-image: url('../images/mexicanflag.png');
+  box-shadow: 0 3000px rgba(29, 24, 24, 0.801) inset;
+}
+
+#chineseflag{
+  background-image: url('../images/chineseflag.webp');
+  box-shadow: 0 3000px rgba(29, 24, 24, 0.801) inset;
+}
+
 .cardwords{
   overflow-wrap: normal;
   font-size: 10px;
