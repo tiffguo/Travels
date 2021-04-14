@@ -337,8 +337,34 @@ label {
 /* Style the back side */
 .flip-card-back {
   background-color: dodgerblue;
+  background-size:cover;
   color: white;
   transform: rotateY(180deg);
+}
+
+#ukflag{
+  background-image: url('../images/unionjack.png');
+  box-shadow: 0 3000px rgba(29, 24, 24, 0.801) inset;
+}
+
+#greeceflag{
+  background-image: url('../images/greeceflag.png');
+  box-shadow: 0 3000px rgba(29, 24, 24, 0.801) inset;
+}
+
+#italianflag{
+  background-image: url('../images/italyflag.jpg');
+  box-shadow: 0 3000px rgba(29, 24, 24, 0.801) inset;
+}
+
+#copenhagenflag{
+  background-image: url('../images/denmarkflag.png');
+  box-shadow: 0 3000px rgba(29, 24, 24, 0.801) inset;
+}
+
+#portugalflag{
+  background-image: url('../images/portugalflag.png');
+  box-shadow: 0 3000px rgba(29, 24, 24, 0.801) inset;
 }
 
 .cardwords{
