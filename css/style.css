@@ -241,7 +241,7 @@ label {
   font-family: 'Josefin+Sans', sans-serif;
 }
 
-
+/* 
 .gals{
   display: grid;
   grid-template-columns: 1fr;
@@ -253,7 +253,7 @@ label {
   width: 75%;
   height: auto;
   margin: 0 auto;
-}
+} */
 
 #landing {
     animation-name: fadein;
@@ -363,42 +363,42 @@ label {
   transform: rotateY(180deg);
 }
 
-#ukflag{
+.ukflag{
   background-image: url('../images/unionjack.png');
   box-shadow: 0 3000px rgba(29, 24, 24, 0.801) inset;
 }
 
-#greeceflag{
+.greeceflag{
   background-image: url('../images/greeceflag.png');
   box-shadow: 0 3000px rgba(29, 24, 24, 0.801) inset;
 }
 
-#italianflag{
+.italianflag{
   background-image: url('../images/italyflag.jpg');
   box-shadow: 0 3000px rgba(29, 24, 24, 0.801) inset;
 }
 
-#copenhagenflag{
+.copenhagenflag{
   background-image: url('../images/denmarkflag.png');
   box-shadow: 0 3000px rgba(29, 24, 24, 0.801) inset;
 }
 
-#portugalflag{
+.portugalflag{
   background-image: url('../images/portugalflag.png');
   box-shadow: 0 3000px rgba(29, 24, 24, 0.801) inset;
 }
 
-#canadaflag{
+.canadaflag{
   background-image: url('../images/canadianflag1.png');
   box-shadow: 0 3000px rgba(29, 24, 24, 0.801) inset;
 }
 
-#mexicanflag{
+.mexicanflag{
   background-image: url('../images/mexicanflag.png');
   box-shadow: 0 3000px rgba(29, 24, 24, 0.801) inset;
 }
 
-#chineseflag{
+.chineseflag{
   background-image: url('../images/chineseflag.webp');
   box-shadow: 0 3000px rgba(29, 24, 24, 0.801) inset;
 }
@@ -619,7 +619,7 @@ visibility: hidden;
     margin-right: 150px;
   }
 
-  .gals{
+  /* .gals{
     margin: 50px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
@@ -629,7 +629,7 @@ visibility: hidden;
 
   .gals > img {
     width: 100%;
-  }
+  } */
 
   .cardpic{
     width: 325px;
@@ -710,12 +710,12 @@ visibility: hidden;
     height: 520px; 
 
   }
-  .gals{
+  /* .gals{
     margin: 50px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto auto;
     grid-row-gap: 30px;
-  }
+  } */
 
   .abouttext{
     margin-left: 100px;
@@ -876,5 +876,8 @@ visibility: hidden;
 
   .item {
     width: 90%;
-  
 }
+
+/* experiment with overlapping polaroid grid */
+
+
