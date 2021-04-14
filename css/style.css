@@ -295,6 +295,10 @@ label {
     transition: none !important;
     transform: none !important;
   }
+
+  .frontcardtext{
+    visibility: visible !important;
+  }
 }
 
 #logo {
@@ -330,6 +334,7 @@ label {
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
+
 
 .flip-card:focus .flip-card-inner {
 	transform: rotateY(180deg);
@@ -409,6 +414,12 @@ label {
   font-size: 20px;
 }
 
+.frontcardtext{
+position: absolute;
+background-color: rgb(34, 44, 34, 0.6); 
+visibility: hidden;
+}
+
 .cardgrid{
   display: grid;
   grid-template-columns: 1fr;
@@ -426,6 +437,116 @@ label {
   border-radius: 10px;
 }
 
+/* experimenting with polaroids */
+.polaroid {
+  background: #fff;
+  padding: 1rem;
+  box-shadow: 0 0.2rem 1.2rem rgba(0,0,0,0.2);
+  
+}
+.polaroid > img{
+  max-width: 100%;
+  height: auto;
+}
+
+.caption {
+  font-size: 1.8rem;
+  font-family: 'Shadows Into Light', cursive;
+  text-align: center;
+  line-height: 2em;
+}
+.item {
+  width: 80%;
+  display: inline-block;
+  margin-top: 2rem;
+  filter: grayscale(50%);
+}
+.item .polaroid:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  transition: all 0.35s;
+}
+.item:nth-of-type(4n+1) {
+  transform: scale(0.8, 0.8) rotate(5deg);
+  transition: all 0.35s;
+}
+.item:nth-of-type(4n+1) .polaroid:before {
+  transform: rotate(6deg);
+  height: 20%;
+  width: 47%;
+  bottom: 30px;
+  right: 12px;
+  box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.4);
+}
+.item:nth-of-type(4n+2) {
+  transform: scale(0.8, 0.8) rotate(-5deg);
+  transition: all 0.35s;
+}
+.item:nth-of-type(4n+2) .polaroid:before {
+  transform: rotate(-6deg);
+  height: 20%;
+  width: 47%;
+  bottom: 30px;
+  left: 12px;
+  box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.4);
+}
+.item:nth-of-type(4n+4) {
+  transform: scale(0.8, 0.8) rotate(3deg);
+  transition: all 0.35s;
+}
+.item:nth-of-type(4n+4) .polaroid:before {
+  transform: rotate(4deg);
+  height: 20%;
+  width: 47%;
+  bottom: 30px;
+  right: 12px;
+  box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.3);
+}
+.item:nth-of-type(4n+3) {
+  transform: scale(0.8, 0.8) rotate(-3deg);
+  transition: all 0.35s;
+}
+.item:nth-of-type(4n+3) .polaroid:before {
+  transform: rotate(-4deg);
+  height: 20%;
+  width: 47%;
+  bottom: 30px;
+  left: 12px;
+  box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.3);
+}
+.item:hover {
+  filter: none;
+  transform: scale(1, 1) rotate(0deg) !important;
+  transition: all 0.35s;
+}
+.item:hover .polaroid:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  transform: rotate(0deg);
+  height: 90%;
+  width: 90%;
+  bottom: 0%;
+  right: 5%;
+  box-shadow: 0 1rem 3rem rgba(0,0,0,0.2);
+  transition: all 0.35s;
+}
+
+.polaroidgrid{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-row-gap: 0px;
+  justify-items: center;
+}
+
+.polaroid > img {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
 
 /* TABLET VIEW */
 @media screen and (min-width: 663px){
@@ -434,6 +555,7 @@ label {
     flex-direction: row;
     justify-content: space-between;
   }
+
 
   header h2 {
     color: white;
@@ -527,7 +649,21 @@ label {
     grid-row-gap: 15px;
     grid-column-gap: 0px;
     justify-items: center;
-  
+  }
+
+  .polaroidgrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-row-gap: 0px;
+    justify-items: center;
+  }
+
+  .item {
+    width: 100%;
+    display: inline-block;
+    margin-top: 2rem;
+    filter: grayscale(50%);
   }
 
 @media screen and (min-width: 1000px){
@@ -727,4 +863,18 @@ label {
       animation: none;
     }
   }
+
+  /* experimenting with polaroid. Credits to Wanderson */
+
+  .polaroidgrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-row-gap: -20px;
+    justify-items: center;
+  }
+
+  .item {
+    width: 90%;
+  
 }
