@@ -139,6 +139,17 @@ a.active-page:not(.country_item){
   padding-top: 70px;  
 }
 
+.polaroidscroll {
+  background-image: url('../images/otherpolaroidscroll.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: scroll; 
+  background-position: center; 
+  background-size: cover;      
+  height: auto;
+  /* box-shadow: 0 10000px rgba(29, 24, 24, 0.3) inset; */
+  /* padding-top: 70px;               */
+}
+
 
 header h2{
   color: white;
