@@ -1052,6 +1052,27 @@ visibility: hidden;
   box-shadow: 0 1rem 3rem rgba(0,0,0,0.2);
   transition: all 0.35s;
 }
+	
+#contact{
+  width: 100%;
+  justify-self: center;
+}
+
+.allcontact{
+  display: flex;
+  flex-direction: row;
+}
+
+.contactside{
+  width: 50%;
+  margin: 0px;
+  padding: 0px;
+}
+
+#pita{
+  height: 100%;
+  width: 100%;
+}
 
 
 
