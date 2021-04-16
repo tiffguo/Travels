@@ -14,6 +14,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>contact</title>
@@ -39,10 +42,32 @@
       <main>
 <div class="allcontact">
       <div class="contact-container" id="contact">
-      <form action="https://formspree.io/f/mvodgpve" method="POST">
+
         <div class="chatheader">
-        <h1>Let's chat!</h1>
+          <h1 class="letschat">Let's Chat!</h1>
+          <div class="social">
+
+            <button class="icon-btn facebook"> 
+            <a class="sociallink" href="https://www.facebook.com/" target="_blank">
+              <i class="fa fa-facebook"></i> 
+            </a>
+            </a>
+            <button class="icon-btn instagram"> 
+            <a class="sociallink" href="https://www.instagram.com/"  target="_blank">
+              <i class="fa fa-instagram"></i>
+            </a>
+            <button class="icon-btn linkedin"> 
+            <a class="sociallink" href="https://github.com/" target="_blank">
+              <i class="fa fa-linkedin"></i>
+            </a>
+              <button class="icon-btn github"> 
+            <a class="sociallink" href="https://github.com/" target="_blank">
+              <i class="fa fa-github"></i>
+            </a>
+          </div>
         </div>
+
+      <form action="https://formspree.io/f/mvodgpve" method="POST">
         <label for="name">Name</label>
         <input type="text" id="name" name="fullname" placeholder="Your name...">
 
@@ -58,7 +83,7 @@
       </div>
 
       <div class="contactside">
-        <img src = "images/overlookingbend.JPG" id="pita" alt = "Cliff overlooking">
+        <img src = "images/overlookingbend.JPG" id="cliffcontact" alt = "Cliff overlooking">
       </div>
   </div>
 
