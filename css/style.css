@@ -2,13 +2,74 @@ html{
   scroll-behavior: smooth;
 }
 
+[class^="icon-btn"]{
+	height: 50px;
+	width: 50px;
+	border: 0;
+	color: #fff;
+	cursor: pointer;
+  font-size: 20px;
+	line-height: 50px;
+	transition: ease-in-out .3s;
+	border-radius: 50px;
+	margin-left: 10px;
+  background-color: #fff;
+  justify-content: center;
+  text-align: center;
+  align-self: center;
+}
+
+
+.facebook {
+	color: #3B5998;
+}
+.linkedin {
+	color: #3b77f7;
+}
+
+.instagram {
+	color: #af0092;
+}
+
+.github {
+	color: #4183C4;
+}
+
+.icon-btn:hover {
+	transform: scale(1.10);	
+	color: #FFFFFF;
+}
+
+.facebook:hover {
+	background-color: #3B5998;	
+}
+
+.instagram:hover {
+	background-color: #fc00a8;	
+}
+
+.linkedin:hover {
+	background-color: #3c85d8;	
+}
+
+.github:hover {
+	background-color: #4183C4;	
+}
+
+
+a.sociallink {
+  color: inherit;	
+  text-align: center;
+  justify-content: center;
+}
+
 body{
   background-color: hsla(0, 0%, 0%, 0.843);
   font-size: 50px;
   margin: 0;
   padding: 0;
   text-align: center;
-  font-family: 'Josefin+Sans', 'sans-serif';
+  font-family: 'Roboto', 'sans-serif';
 }
 
 h1{
@@ -16,7 +77,7 @@ h1{
   font-size: 40px;
   padding: 10px;
   text-align: center;
-  font-family: 'Josefin+Sans', sans-serif;
+  font-family: 'Roboto', 'sans-serif';
 }
 
 h2{
@@ -46,9 +107,10 @@ header{
 
 .nav_links{
   display: flex;
-  flex-direction:row;
+  flex-direction:column;
   justify-content: center;
   font-family: 'Staatliches', 'sans-serif';
+  margin-top: 10px;
 }
 
 nav{
@@ -247,7 +309,7 @@ textarea {
   padding: 0px;
 }
 
-#pita{
+#cliffcontact{
   height: 100%;
   width: 100%;
 }
@@ -284,6 +346,10 @@ label {
   background-image: url('../images/subwaycave.jpg');
   height: 80px;
   padding-top: 15px;
+  box-shadow: 0 3000px rgba(29, 24, 24, 0.501) inset;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 button {
@@ -316,19 +382,6 @@ button:hover {
   font-family: 'Josefin+Sans', sans-serif;
 }
 
-/* 
-.gals{
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  grid-row-gap: 30px;
-}
-
-.gals > img {
-  width: 75%;
-  height: auto;
-  margin: 0 auto;
-} */
 
 #landing {
     animation-name: fadein;
@@ -480,13 +533,13 @@ button:hover {
 
 .cardwords{
   overflow-wrap: normal;
-  font-size: 10px;
+  font-size: 20px;
   margin-left: 5px;
   margin-right: 5px;
 }
 
 .cardheader{
-  font-size: 20px;
+  font-size: 40px;
 }
 
 .frontcardtext{
@@ -534,7 +587,7 @@ visibility: hidden;
   width: 80%;
   display: inline-block;
   margin-top: 2rem;
-  filter: grayscale(50%);
+  filter: grayscale(0%);
 }
 .item .polaroid:before {
   content: '';
@@ -591,12 +644,31 @@ visibility: hidden;
   left: 12px;
   box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.3);
 }
-.item:hover {
+.item:hover{
   filter: none;
   transform: scale(1, 1) rotate(0deg) !important;
   transition: all 0.35s;
 }
 .item:hover .polaroid:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  transform: rotate(0deg);
+  height: 90%;
+  width: 90%;
+  bottom: 0%;
+  right: 5%;
+  box-shadow: 0 1rem 3rem rgba(0,0,0,0.2);
+  transition: all 0.35s;
+}
+
+.item:focus {
+  filter: none;
+  transform: scale(1, 1) rotate(0deg) !important;
+  transition: all 0.35s;
+}
+
+.item:focus .polaroid:before {
   content: '';
   position: absolute;
   z-index: -1;
@@ -628,7 +700,7 @@ visibility: hidden;
 @media screen and (min-width: 663px){
   header{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
   }
 
@@ -638,7 +710,7 @@ visibility: hidden;
     font-size: 30px;
     margin-top: 20px;
     padding-top: 10px;
-    margin-left: 30px;
+    /* margin-left: 30px; */
     font-family: 'Staatliches', 'sans-serif';
   }
 
@@ -651,8 +723,8 @@ visibility: hidden;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 35px;
-  margin-right: 30px;
+  margin-top: 20px;
+  /* margin-right: 30px; */
   font-family: 'Staatliches', 'sans-serif';
 }
 
@@ -695,17 +767,6 @@ visibility: hidden;
     margin-right: 150px;
   }
 
-  /* .gals{
-    margin: 50px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    grid-row-gap: 30px;
-    justify-items: center;
-  }
-
-  .gals > img {
-    width: 100%;
-  } */
 
   .cardpic{
     width: 325px;
@@ -739,7 +800,7 @@ visibility: hidden;
     width: 100%;
     display: inline-block;
     margin-top: 2rem;
-    filter: grayscale(50%);
+    filter: grayscale(0%);
   }
 
 @media screen and (min-width: 1000px){
@@ -751,6 +812,12 @@ visibility: hidden;
     padding-top: 10px;
     margin-left: 30px;
     font-family: 'Staatliches', 'sans-serif';
+  }
+
+  header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   nav {
@@ -909,7 +976,7 @@ visibility: hidden;
     overflow-wrap: normal;
     margin-left: 15px;
     margin-right: 15px;
-    font-size: 15px;
+    font-size: 24px;
   }
 
   .cardheader{
@@ -1069,10 +1136,8 @@ visibility: hidden;
   padding: 0px;
 }
 
-#pita{
+#cliffcontact{
   height: 100%;
   width: 100%;
 }
-
-
 
