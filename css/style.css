@@ -2,9 +2,16 @@ html{
   scroll-behavior: smooth;
 }
 
+.letschat {
+  margin-top: 5px;
+}
+
+.social {
+  margin-top: 5px;
+}
+
 [class^="icon-btn"]{
 	height: 60px;
-	/* width: 50px; */
 	border: 0;
 	color: #fff;
 	cursor: pointer;
@@ -19,12 +26,8 @@ html{
   align-self: center;
 }
 
-
 .facebook {
   color: #3B5998;
-  /* justify-content: center;
-  text-align: center;
-  align-self: center; */
 }
 
 .linkedin {
@@ -104,7 +107,6 @@ header{
     background:#333;
     text-align:center;
     color: #FFFFFF;
-    /* position:fixed; */
     bottom:0; left: 0px;
     margin-left: 0px;
   }
@@ -164,7 +166,6 @@ a.active-page:not(.country_item){
   100% { transform: rotate( 0.0deg) }
 }
 
-
 .homescroll {
   background-image: url('../images/subwaycave.jpg');
   background-repeat: no-repeat;
@@ -176,33 +177,26 @@ a.active-page:not(.country_item){
 }
 
 .countryscroll {
-  background-image: url('../images/piccadillybetter.jpg');
+  background-image: url('../images/mirror.png');
   background-repeat: no-repeat;
   background-attachment: fixed; 
   background-position: center; 
   background-size: cover;      
-  height: 400px; 
-  padding-top: 70px;  
+  padding: 50px;
+  height: 20%;
+  box-shadow: 0 3000px rgba(29, 24, 24, 0.401) inset;
 }
 
-.foodscroll {
-  background-image: url('../images/mykonosfood.JPG');
-  background-repeat: no-repeat;
-  background-attachment: fixed; 
-  background-position: center; 
-  background-size: cover;      
-  height: 400px; 
-  padding-top: 70px;  
-}
 
 .funscroll {
-  background-image: url('../images/londonbridge.jpg');
+  background-image: url('../images/bath.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed; 
   background-position: center; 
   background-size: cover;      
-  height: 400px; 
-  padding-top: 70px;  
+  padding: 50px;
+  height: 20%; 
+  box-shadow: 0 3000px rgba(29, 24, 24, 0.601) inset;
 }
 
 .polaroidscroll {
@@ -212,8 +206,6 @@ a.active-page:not(.country_item){
   background-position: center; 
   background-size: cover;      
   height: auto;
-  /* box-shadow: 0 10000px rgba(29, 24, 24, 0.3) inset; */
-  /* padding-top: 70px;               */
 }
 
 
@@ -348,6 +340,10 @@ label {
 
 .chatheader{
   background-image: url('../images/subwaycave.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-position: center; 
+  background-size: cover;      
   height: 12%;
   padding-top: 15px;
   box-shadow: 0 3000px rgba(29, 24, 24, 0.501) inset;
@@ -537,7 +533,7 @@ button:hover {
 
 .cardwords{
   overflow-wrap: normal;
-  font-size: 20px;
+  font-size: 17px;
   margin-left: 5px;
   margin-right: 5px;
 }
@@ -743,21 +739,6 @@ visibility: hidden;
     padding-top: 200px;  
   }
 
-  .foodscroll{
-    height: 500px; 
-    padding-top: 200px;  
-  }
-
-  .countryscroll{
-    height: 500px; 
-    padding-top: 200px;  
-  }
-
-  .funscroll{
-    height: 500px; 
-    padding-top: 200px;  
-  }
-
   #profile{
     width: 70%;
   }
@@ -848,20 +829,9 @@ visibility: hidden;
 
   }
 
-  .countryscroll{
+  /* .countryscroll{
     height: 520px; 
 
-  }
-
-  .funscroll{
-    height: 520px; 
-
-  }
-  /* .gals{
-    margin: 50px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    grid-row-gap: 30px;
   } */
 
   .abouttext{
